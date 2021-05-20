@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+
+- clean: ["~", "~/.config"]
+
+- create:
+    - ~/.fonts
+
+- link:
+    ~/.config/nvim: nvim
+    ~/.gitconfig: .gitconfig
+    ~/.tmux.conf: .tmux.conf
+    ~/.tmux.conf.local: .tmux.conf.local
+    ~/.vimrc: .vimrc
+    ~/.zsh_profile: .zsh_profile
+    ~/.zsh: zsh
+    ~/.zshenv: .zshenv
+    ~/.zshrc: .zshrc
+
+- brewfile:
+    - Brewfile
