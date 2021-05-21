@@ -14,9 +14,10 @@
     ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
     ~/.tmux.conf.local: .tmux.conf.local
+    ~/.vim: .config/vim
     ~/.vimrc: .vimrc
     ~/.zsh_profile: .zsh_profile
-    ~/.zsh: zsh
+    ~/.zsh: .config/zsh
     ~/.zshenv: .zshenv
     ~/.zshrc: .zshrc
 
