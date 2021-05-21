@@ -22,4 +22,4 @@
     ~/.zshrc: .zshrc
 
 - brewfile:
-    - Brewfile
+    - .brew/Brewfile
