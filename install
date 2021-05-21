@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+CONFIG_PATH="${ROOT_DIR}/install.conf.yaml"
+
+"${ROOT_DIR}/dotbot/bin/dotbot" \
+  --base-directory "${ROOT_DIR}" \
+  --config-file "${CONFIG_PATH}" \
+  --plugin-dir "${ROOT_DIR}/dotbot-brew" \
+  "${@}"
