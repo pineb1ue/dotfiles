@@ -12,8 +12,8 @@
 - link:
     ~/.config/nvim: nvim
     ~/.gitconfig: .gitconfig
-    ~/.tmux.conf: .tmux.conf
-    ~/.tmux.conf.local: .tmux.conf.local
+    ~/.tmux.conf: .config/tmux/.tmux.conf
+    ~/.tmux.conf.local: .config/tmux/.tmux.conf.local
     ~/.vim: .config/vim
     ~/.vimrc: .vimrc
     ~/.zsh_profile: .zsh_profile
