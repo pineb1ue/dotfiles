@@ -51891,7 +51891,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>~/dotfiles/dotbot-brew</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{731, 450}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -52654,6 +52654,10 @@
 	<real>598207120.01885903</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
 	<integer>152</integer>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>1</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>588151494.49581397</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -53472,7 +53476,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mamo/Documents</string>
+	<string>/Users/mamo/dotfiles/.config/iterm2/</string>
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
