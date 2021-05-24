@@ -10,7 +10,7 @@
     - ~/.fonts
 
 - link:
-    ~/.config/nvim: nvim
+    # ~/.config/nvim: nvim
     ~/.gitconfig: .config/git/.gitconfig
     ~/.tmux.conf: .config/tmux/.tmux.conf
     ~/.tmux.conf.local: .config/tmux/.tmux.conf.local
