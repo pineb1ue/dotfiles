@@ -20,7 +20,6 @@ cask "cheatsheet"
 cask "discord"
 cask "docker"
 cask "dropbox"
-cask "font-ricty-diminished"
 cask "google-backup-and-sync"
 cask "google-chrome"
 cask "iterm2"
@@ -30,6 +29,9 @@ cask "visual-studio-code"
 cask "vlc"
 cask "xquartz"
 cask "zoom"
+
+cask "font-ricty-diminished"
+cask "font-hack"
 
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
