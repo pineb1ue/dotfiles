@@ -22,3 +22,8 @@
   ```
   bash ~/dotfiles/install
   ```
+3. Plugin Install
+  ```
+  bash ~/dotfiles/.bin/plugin_installer.sh
+  ```
+  
