@@ -25,5 +25,5 @@ if ! command_exists git ; then
 fi
 
 echo " ----- Clone my dotfiles  ------"
-git clone https://github.com/pineb1ue/dotfiles.git
+git clone --recursive https://github.com/pineb1ue/dotfiles.git
 echo " ------------ END ------------"
