@@ -1,7 +1,9 @@
-# auto config setup for mac
+# MY DOTFILES
 
 ## Overview
 
+![screenshot-1](misc/screenshot-1.png)
+![screenshot-2](misc/screenshot-2.png)
 
 ## Components
 
@@ -10,17 +12,13 @@
 - Editor: VSCode
 - Font: Ricty Diminished and Hack Nerd Font
 
-## Downloads
-to get started please run:
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/pineb1ue/dotfiles/master/.bin/setup.sh)"
-```
-
 ## Install
 
 1. Downloads
-
+  ```
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/pineb1ue/dotfiles/master/.bin/setup.sh)"
+  ```
 2. Install
-```
-bash ~/dotfiles/install
-```
+  ```
+  bash ~/dotfiles/install
+  ```
