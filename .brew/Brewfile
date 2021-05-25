@@ -1,5 +1,6 @@
 cask_args appdir: "/Applications"
 
+brew "colordiff"
 brew "exa"
 brew "git"
 brew "go"
@@ -13,6 +14,10 @@ brew "reattach-to-user-namespace"
 brew "tmux"
 brew "tree"
 brew "wget"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
 
 cask "adobe-acrobat-reader"
 cask "alfred"
