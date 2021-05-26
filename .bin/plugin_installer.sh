@@ -5,6 +5,8 @@ echo -e "\e[33mInstall plugins\!\e[m"
 # zsh
 echo " ------------ zsh ------------"
 chsh -s $(which zsh)
+chmod 755 /usr/local/share/zsh
+chomd 755 /usr/local/share/zshsite-functions/
 echo " ------------ END ------------"
 
 # zplug
