@@ -23,3 +23,6 @@
 
 - brewfile:
     - .brew/Brewfile
+
+- tap:
+    - homebrew/cask-fonts

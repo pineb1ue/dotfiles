@@ -36,8 +36,7 @@ cask "xquartz"
 cask "zoom"
 
 cask "font-ricty-diminished"
-cask "font-hack"
+cask "font-hack-nerd-font"
 
-mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Xcode", id: 497799835
