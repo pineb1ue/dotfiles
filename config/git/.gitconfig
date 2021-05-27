@@ -1,0 +1,9 @@
+[user]
+    email = pineb1ue10ngtree@gmail.com
+    name = Mamoru Matsunaga
+[pull]
+    ff = only
+    rebase = false
+
+[ghq]
+	root = $GOPATH/src
