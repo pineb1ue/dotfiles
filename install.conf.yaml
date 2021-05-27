@@ -4,10 +4,21 @@
       force: true
       relink: true
 
+- shell:
+    - command: ./.bin/setup.sh
+
 - clean: ["~", "~/.config"]
 
 - create:
     - ~/.fonts
+    - ~/.ssh
+    - ~/GoogleDrive
+
+- tap:
+    - homebrew/cask-fonts
+
+- brewfile:
+    - .brew/Brewfile
 
 - link:
     # ~/.config/nvim: nvim
@@ -21,8 +32,7 @@
     ~/.zshenv: .zshenv
     ~/.zshrc: .zshrc
 
-- brewfile:
-    - .brew/Brewfile
-
-- tap:
-    - homebrew/cask-fonts
+- shell:
+    - command: chsh -s $(which zsh)
+    - command: chmod 755 /usr/local/share/zsh && chomd 755 /usr/local/share/zshsite-functions/
+    - command: ./.bin/plugin_installer.sh
