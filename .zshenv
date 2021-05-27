@@ -9,6 +9,7 @@ export PATH="$HOME/bin:$PATH"
 export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/docker.sock"
 
 # Python
+export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # local
