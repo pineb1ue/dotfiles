@@ -1,89 +1,118 @@
-# Global alias
-alias -g L='| less'
-alias -g H='| head'
-alias -g G='| grep'
-alias -g GI='| grep -ri'
+alias s="source "$HOME/.zshrc" && source "$HOME/.zshenv""
 
-# Common alias
-## Move parent directory alias
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias bru="brew update && brew outdated && brew upgrade && brew cleanup"
 
-# alias l='ls -ltr'
-# alias la='ls -la'
-# alias ll='ls -l'
-# alias lst='ls -ltr'
+alias -g G="| grep"
+alias -g H="| head"
+alias -g L="| less"
+alias -g T="| tail"
 
-alias l='ls -G'
-alias la='ls -a -G'
-alias ll='ls -l -G'
-alias lla='ls -la -G'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 
-alias top='htop'
+if [[ -d "$HOME/Desktop" ]]; then
+  alias de="cd "$HOME/Desktop""
+fi
 
-alias v='vim'
-alias vi='vim'
-alias vz='vim ~/.zshrc'
+if [ -d "$HOME/Downloads" ]; then
+  alias dl="cd "$HOME/Downloads""
+fi
 
-alias atom='vim'
-alias emacs='rm -rf /'
+if [ -d "$HOME/GoogleDrive" ]; then
+  alias dr="cd "$HOME/GoogleDrive""
+fi
 
-## Display date on history
-alias h='fc -lt '%F %T' 1'
+alias h="history -i"
 
-## Package manager
-alias agi='sudo apt install'
-alias agr='sudo apt remove'
-alias agu='sudo apt update'
+alias cp="cp -ir"
+alias mkdir="mkdir -p"
+alias mv="mv -i"
 
-## Clipboard like mac
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+if hash "docker" >/dev/null 2>&1; then
+  alias d="docker"
+  alias dim="docker images"
+  alias dps="docker ps"
+  alias dpsa="docker ps -a"
+fi
 
-## Interactive
-alias cp='cp -i'
-alias cp='cp -r'
-alias rm='rm -i'
-alias mkdir='mkdir -p'
+if hash "docker-compose" >/dev/null 2>&1; then
+  alias dc="docker-compose"
+fi
 
-## Git alias
-alias g='git'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gco='git checkout'
-alias gd='git diff'
-alias gf='git fetch'
-alias gl='git log'
-alias glo='git log --oneline'
-alias gp='git push'
-alias gpod='git push origin develop'
-alias gpom='git push origin master'
-alias gpl='git pull'
-alias gs='git status'
-alias gst='git status'
+if hash "exa" >/dev/null 2>&1; then
+  alias l="exa -hl --git"
+  alias la="exa -ahl --git"
+  alias ls="exa"
+else
+  alias l='ls -G'
+    alias la='ls -a -G'
+    alias ll='ls -l -G'
+    alias lla='ls -la -G'
+fi
 
-## Python alias
-alias py='python'
-alias py2='python2'
-alias py3='python3'
+if hash "git" >/dev/null 2>&1; then
+  alias g="git"
+  alias ga="git add"
+  alias gb="git branch"
+  alias gc="git commit"
+  alias gco="git checkout"
+  alias gcp="git cherry-pick"
+  alias gd="git diff"
+  alias gf="git fetch"
+  alias gl="git log"
+  alias gm="git merge"
+  alias gp="git push"
+  alias gpl="git pull"
+  alias gplo="git pull origin"
+  alias gpo="git push origin"
+  alias gr="git rebase"
+  alias gs="git status"
+  alias gst="git stash"
+  alias gsw="git switch"
+fi
 
-# tar
-alias targz='tar -zcvf'
-alias untargz='tar -zxvf'
+if hash "gomi" >/dev/null 2>&1; then
+  alias rm="gomi"
+fi
 
-# hub alias
-alias hbr='hub browse'
+if hash "htop" >/dev/null 2>&1; then
+  alias top="htop"
+fi
 
-# peco alias
-alias gcd='cd $(ghq root)/$(ghq list | peco)'
+if hash "poetry" >/dev/null 2>&1; then
+  alias po="poetry run"
+  alias pp="poetry run python"
+  alias popup="poetry run pip install --upgrade pip"
 
-# exa
-alias ls='exa'
-alias l='ls -hl --color=auto --git'
-alias la='ls -ahl --color=auto --git'
+  pdev() {
+    poetry add -D black flake8
+  }
+fi
 
-# poetry
-alias po='poetry run'
-alias pp='poetry run python'
+if hash "python" >/dev/null 2>&1; then
+  alias pipup="pip install --upgrade pip"
+  alias py="python"
+  alias py2="python2"
+  alias py3="python3"
+  alias venv="python -m venv .venv && source .venv/bin/activate"
+fi
+
+if hash "tmux" >/dev/null 2>&1; then
+  alias tt="tmux attach -t default || tmux new -s default"
+fi
+
+mkcd() {
+  mkdir -p $1
+  cd $1
+}
+
+targz() {
+  tar -cvzf $1.tar.gz $1
+}
+
+untargz() {
+  tar -zxvf $1
+}
