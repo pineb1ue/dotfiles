@@ -13,8 +13,12 @@
 - Font: Ricty Diminished and Hack Nerd Font
 
 ## Install
-```
+
+1. Downloads
   ```
-  ./dotfiles/install
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/pineb1ue/dotfiles/master/bin/setup.sh)"
   ```
-```
+2. Install
+  ```
+  bash ~/dotfiles/install
+  ```
