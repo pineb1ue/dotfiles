@@ -4,9 +4,6 @@
       force: true
       relink: true
 
-- shell:
-    - command: ./.bin/setup.sh
-
 - clean: ["~", "~/.config"]
 
 - create:
@@ -18,21 +15,21 @@
     - homebrew/cask-fonts
 
 - brewfile:
-    - .brew/Brewfile
+    - brew/Brewfile
 
 - link:
     # ~/.config/nvim: nvim
-    ~/.gitconfig: .config/git/.gitconfig
-    ~/.tmux.conf: .config/tmux/.tmux.conf
-    ~/.tmux.conf.local: .config/tmux/.tmux.conf.local
-    ~/.vim: .config/vim
+    ~/.gitconfig: config/git/.gitconfig
+    ~/.tmux.conf: config/tmux/.tmux.conf
+    ~/.tmux.conf.local: config/tmux/.tmux.conf.local
+    ~/.vim: config/vim
     ~/.vimrc: .vimrc
     ~/.zsh_profile: .zsh_profile
-    ~/.zsh: .config/zsh
+    ~/.zsh: config/zsh
     ~/.zshenv: .zshenv
     ~/.zshrc: .zshrc
 
 - shell:
     - command: chsh -s $(which zsh)
     - command: chmod 755 /usr/local/share/zsh && chomd 755 /usr/local/share/zshsite-functions/
-    - command: ./.bin/plugin_installer.sh
+    - command: bash bin/plugin_installer.sh
