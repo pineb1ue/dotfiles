@@ -32,4 +32,4 @@
 - shell:
     - command: chsh -s $(which zsh)
     - command: chmod 755 /usr/local/share/zsh && chomd 755 /usr/local/share/zshsite-functions/
-    - command: bash bin/plugin_installer.sh
+    - command: bash ~/dotfiles/bin/plugin_installer.sh
