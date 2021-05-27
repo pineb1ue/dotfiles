@@ -13,6 +13,7 @@
 
 - tap:
     - homebrew/cask-fonts
+    - b4b4r07/tap
 
 - brewfile:
     - brew/Brewfile
