@@ -94,9 +94,8 @@ fi
 
 if hash "python" >/dev/null 2>&1; then
   alias pipup="pip install --upgrade pip"
-  alias py="python"
   alias py2="python2"
-  alias py3="python3"
+  alias py="python3"
   alias venv="python -m venv .venv && source .venv/bin/activate"
 fi
 
