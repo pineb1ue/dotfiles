@@ -282,7 +282,7 @@ bind e new-window -n "~/.tmux.conf.local" "sh -c '\${EDITOR:-vim} ~/.tmux.conf.l
 # split current window horizontally
 bind - split-window -v
 # split current window vertically
-bind \ split-window -h
+bind _ split-window -h
 
 # ignore confirmation when deleting panes or windows
 bind-key x kill-pane
