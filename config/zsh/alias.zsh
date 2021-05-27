@@ -96,11 +96,16 @@ if hash "python" >/dev/null 2>&1; then
   alias pipup="pip install --upgrade pip"
   alias py2="python2"
   alias py="python3"
+  alias python="python3"
   alias venv="python -m venv .venv && source .venv/bin/activate"
 fi
 
 if hash "tmux" >/dev/null 2>&1; then
   alias tt="tmux attach -t default || tmux new -s default"
+fi
+
+if hash "vim" >/dev/null 2>&1; then
+  alias v="vim"
 fi
 
 mkcd() {
