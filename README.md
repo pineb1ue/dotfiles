@@ -18,7 +18,11 @@
   ```
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/pineb1ue/dotfiles/master/bin/setup.sh)"
   ```
-2. Install
+2. Homebrew
+  ```
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+3. Install
   ```
   bash ~/dotfiles/install
   ```
