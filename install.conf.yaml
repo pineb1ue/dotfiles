@@ -19,7 +19,6 @@
           ~/.vim: config/vim
           ~/.vimrc: .vimrc
           ~/.wezterm.lua: config/wezterm/wezterm.lua
-          ~/.zsh_profile: .zsh_profile
           ~/.zshenv: .zshenv
           ~/.zshrc: .zshrc
           ~/.zsh: config/zsh
