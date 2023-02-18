@@ -1,7 +1,6 @@
-[[ ! -d "$XDG_STATE_HOME/zsh" ]] && mkdir -p "$XDG_STATE_HOME/zsh"
-HISTFILE="$XDG_STATE_HOME/zsh/history"
-HISTSIZE=100000
-SAVEHIST=1000000
+export `HISTFILE="${HOME}/.zsh_history"
+export `HISTSIZE=100000
+export SAVEHIST=1000000
 
 setopt append_history
 setopt extended_history
