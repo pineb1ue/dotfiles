@@ -271,21 +271,21 @@ set -g history-limit 10000
 set -g mouse on
 
 # replace C-b by C-a instead of using both prefixes
-unbind C-a
-unbind C-b
-set -g prefix C-f
-bind C-f send-prefix
+# unbind C-a
+# unbind C-b
+# set -g prefix C-f
+# bind C-f send-prefix
 
 # edit configuration
-bind e new-window -n "~/.tmux.conf.local" "sh -c '\${EDITOR:-vim} ~/.tmux.conf.local && tmux source ~/.tmux.conf && tmux display \"~/.tmux.conf sourced\"'"
+# bind e new-window -n "~/.tmux.conf.local" "sh -c '\${EDITOR:-vim} ~/.tmux.conf.local && tmux source ~/.tmux.conf && tmux display \"~/.tmux.conf sourced\"'"
 
 # split current window horizontally
-bind - split-window -v
+# bind - split-window -v
 # split current window vertically
-bind _ split-window -h
+# bind _ split-window -h
 
 # ignore confirmation when deleting panes or windows
-bind-key x kill-pane
-bind-key X kill-window
+# bind-key x kill-pane
+# bind-key X kill-window
 
 set -g set-titles off
