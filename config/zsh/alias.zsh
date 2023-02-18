@@ -1,8 +1,6 @@
 alias s="source "$HOME/.zshrc" && source "$HOME/.zshenv""
 
-alias bru="brew update && brew outdated && brew upgrade && brew cleanup"
-
-alias -g G="| grep"
+alias -g G="| grep --color=auto"
 alias -g H="| head"
 alias -g L="| less"
 alias -g T="| tail"
@@ -25,32 +23,43 @@ if [ -d "$HOME/GoogleDrive" ]; then
   alias dr="cd "$HOME/GoogleDrive""
 fi
 
-alias h="history -i"
-
 alias cp="cp -ir"
 alias mkdir="mkdir -p"
 alias mv="mv -i"
 
 if hash "docker" >/dev/null 2>&1; then
-  alias d="docker"
-  alias dim="docker images"
-  alias dps="docker ps"
-  alias dpsa="docker ps -a"
+	alias d="docker"
+	alias dim="docker images"
+	alias dps="docker ps"
+	alias dpsa="docker ps -a"
+
+	if hash "fzf" >/dev/null 2>&1; then
+		fzf::docker-remove-images() {
+			local images="$(docker images | tail +2 | sort | fzf --multi | awk '{print $3}')"
+			[[ -z "$images" ]] && return
+			docker rmi $(echo "$images" | tr "\n" " ")
+		}
+		alias fzfdri="fzf::docker-remove-images"
+
+		fzf::docker-run-container() {
+			local image="$(docker images | tail +2 | sort | fzf | awk '{print $3}')"
+			echo -n "command: "
+			read command
+			docker run -it --rm "$image" "$command"
+		}
+		alias fzfdrc="fzf::docker-run-container"
+	fi
 fi
 
 if hash "docker-compose" >/dev/null 2>&1; then
-  alias dc="docker-compose"
+	alias dc="docker-compose"
 fi
 
-if hash "exa" >/dev/null 2>&1; then
-  alias l="exa -hl --git"
-  alias la="exa -ahl --git"
-  alias ls="exa"
-else
-  alias l='ls -G'
-    alias la='ls -a -G'
-    alias ll='ls -l -G'
-    alias lla='ls -la -G'
+if hash "lsd" >/dev/null 2>&1; then
+	alias l="lsd -l"
+	alias la="lsd -la"
+	alias ls="lsd -l"
+	alias tree="lsd --tree"
 fi
 
 if hash "git" >/dev/null 2>&1; then
