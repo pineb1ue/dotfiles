@@ -1,30 +1,30 @@
 - defaults:
-          link:
-                  create: true
-                  force: true
-                  relink: true
+  link:
+    create: true
+    force: true
+    relink: true
 
 - clean: ["~", "~/.dotfiles"]
 
 - create:
-          - ~/.config
-          - ~/.fonts
-          - ~/.ssh
+  - ~/.config
+  - ~/.fonts
+  - ~/.ssh
 
 - link:
-          ~/.Brewfile: brew/Brewfile
-          ~/.gitconfig: config/git/.gitconfig
-          ~/.tmux.conf: config/tmux/.tmux.conf
-          ~/.tmux.conf.local: config/tmux/.tmux.conf.local
-          ~/.vim: config/vim
-          ~/.vimrc: .vimrc
-          ~/.wezterm.lua: config/wezterm/wezterm.lua
-          ~/.zshenv: .zshenv
-          ~/.zshrc: .zshrc
-          ~/.zsh: config/zsh
-          ~/.config/karabiner/karabiner.json: config/karabiner/karabiner.json
-          ~/.config/sheldon/plugins.toml: config/sheldon/plugins.toml
-          ~/.config/starship.toml: config/starship/starship.toml
+  ~/.Brewfile: brew/Brewfile
+  ~/.gitconfig: config/git/.gitconfig
+  ~/.tmux.conf: config/tmux/.tmux.conf
+  ~/.tmux.conf.local: config/tmux/.tmux.conf.local
+  ~/.vim: config/vim
+  ~/.vimrc: .vimrc
+  ~/.wezterm.lua: config/wezterm/wezterm.lua
+  ~/.zshenv: .zshenv
+  ~/.zshrc: .zshrc
+  ~/.zsh: config/zsh
+  ~/.config/karabiner/karabiner.json: config/karabiner/karabiner.json
+  ~/.config/sheldon/plugins.toml: config/sheldon/plugins.toml
+  ~/.config/starship.toml: config/starship/starship.toml
 
 - shell:
-          - command: chsh -s $(which zsh)
+  - command: chsh -s $(which zsh)
